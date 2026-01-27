@@ -128,9 +128,20 @@
     /* Responsive: turn opening-hours table into cards on small screens */
     @media (max-width: 640px){
       .wrap{ padding-bottom: 26px; }
-      header{ padding: 18px 16px; }
-      header h1{ font-size: 1.35rem; }
-
+      header{ padding: 16px 12px; margin: 12px 0; }
+      header h1{ font-size: 1.25rem; margin-bottom: 8px; }
+      header p{ font-size: 0.9rem; }
+      
+      header > div{
+        flex-direction: column;
+        gap: 12px;
+      }
+      header img{
+        width: 100% !important;
+        height: auto !important;
+        max-width: 150px;
+      }
+      
       table, thead, tbody, th, td, tr{
         display: block;
       }
@@ -174,7 +185,7 @@
       <div style="display: flex; align-items: center; gap: 16px; justify-content: space-between;">
         <div>
           <h1>Tierärztliche Praxis Dr. U. Wulf / C. Majora</h1>
-          <p>Querallee 11, 21698 Bargstedt · Tel. 04164 2777</p>
+          <p>Querallee 11 · 21698 Bargstedt · Tel. 04164 2777</p>
         </div>
         <img src="images/logo.JPG" alt="Praxis Logo" style="width: auto; height: 120px; border-radius: 8px; flex-shrink: 0;">
       </div>
