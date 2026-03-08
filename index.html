@@ -1,63 +1,70 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="format-detection" content="telephone=no">
   <title>Tierarztpraxis Bargstedt</title>
-  <meta name="description" content="Tierarztpraxis Bargstedt – Dr. U. Wulf & C. Majora bieten Termin- und offene Sprechstunde. Jetzt online Neukundenregistrierung.">
+  <meta name="description"
+    content="Tierarztpraxis Bargstedt – Dr. U. Wulf & C. Majora bieten Termin- und offene Sprechstunde. Jetzt online Neukundenregistrierung.">
 
-  
+
   <style>
-       @font-face {
+    @font-face {
       font-family: 'Inter';
       src: url('fonts/Inter-Regular.woff2') format('woff2');
       font-weight: 400;
       font-display: swap;
     }
+
     @font-face {
       font-family: 'Inter';
       src: url('fonts/Inter-Medium.woff2') format('woff2');
       font-weight: 500;
       font-display: swap;
     }
+
     @font-face {
       font-family: 'Inter';
       src: url('fonts/Inter-SemiBold.woff2') format('woff2');
       font-weight: 600;
       font-display: swap;
     }
-   
-    :root{
+
+    :root {
       --bg: #f3f6fb;
       --card: #ffffff;
       --text: #1f2a37;
       --muted: #5b6776;
       --line: #e6ebf2;
-      --brand1:#2f80ed;
-      --brand2:#14b8a6;
+      --brand1: #2f80ed;
+      --brand2: #14b8a6;
       --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
       --radius: 16px;
     }
 
-    *{ box-sizing: border-box; }
-    body{
-      margin:0;
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
       font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
       color: var(--text);
-      background: radial-gradient(1200px 600px at 20% 0%, rgba(47,128,237,.12), transparent 60%),
-                  radial-gradient(1000px 600px at 90% 10%, rgba(20,184,166,.10), transparent 55%),
-                  var(--bg);
+      background: radial-gradient(1200px 600px at 20% 0%, rgba(47, 128, 237, .12), transparent 60%),
+        radial-gradient(1000px 600px at 90% 10%, rgba(20, 184, 166, .10), transparent 55%),
+        var(--bg);
       line-height: 1.55;
     }
 
-    .wrap{
+    .wrap {
       max-width: 920px;
       margin: 0 auto;
       padding: 20px 16px 40px;
     }
 
-    header{
+    header {
       margin: 18px 0 18px;
       padding: 22px 18px;
       border-radius: var(--radius);
@@ -65,23 +72,25 @@
       background: #2f80ed;
       box-shadow: var(--shadow);
     }
-    header h1{
-      margin:0 0 6px;
+
+    header h1 {
+      margin: 0 0 6px;
       font-size: 1.55rem;
       letter-spacing: -0.02em;
     }
-    header p{
-      margin:0;
-      opacity:.95;
+
+    header p {
+      margin: 0;
+      opacity: .95;
       font-size: 0.98rem;
     }
 
-    .grid{
+    .grid {
       display: grid;
       gap: 14px;
     }
 
-    .card{
+    .card {
       background: var(--card);
       border: 1px solid var(--line);
       border-radius: var(--radius);
@@ -89,39 +98,58 @@
       padding: 18px;
     }
 
-    h2{
+    h2 {
       margin: 0 0 10px;
       font-size: 1.15rem;
       letter-spacing: -0.01em;
     }
-    p{ margin: 0 0 10px; color: var(--muted); }
-    p:last-child{ margin-bottom: 0; }
-    header p{ color: white; }
+
+    p {
+      margin: 0 0 10px;
+      color: var(--muted);
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    header p {
+      color: white;
+    }
 
     /* Desktop table */
-    table{
+    table {
       width: 100%;
       border-collapse: collapse;
       border: 1px solid var(--line);
       border-radius: 12px;
       overflow: hidden;
     }
-    th, td{
+
+    th,
+    td {
       padding: 12px 12px;
       text-align: left;
       border-bottom: 1px solid var(--line);
       vertical-align: top;
     }
-    th{
+
+    th {
       background: #f7f9fc;
       color: var(--text);
       font-weight: 600;
       font-size: 0.95rem;
     }
-    td{ color: var(--text); }
-    tr:last-child td{ border-bottom: none; }
 
-    .note{
+    td {
+      color: var(--text);
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    .note {
       margin-top: 12px;
       padding: 12px;
       border-radius: 12px;
@@ -130,46 +158,74 @@
       color: var(--muted);
     }
 
-    footer{
+    footer {
       margin-top: 16px;
       text-align: center;
       color: var(--muted);
       font-size: 0.95rem;
     }
-    a{
+
+    a {
       color: var(--brand1);
       text-decoration: none;
       font-weight: 600;
     }
-    a:hover{ text-decoration: underline; }
+
+    a:hover {
+      text-decoration: underline;
+    }
 
     /* Responsive: turn opening-hours table into cards on small screens */
-    @media (max-width: 640px){
-      .wrap{ padding-bottom: 26px; }
-      header{ padding: 16px 12px; margin: 12px 0; }
-      header h1{ font-size: 1.25rem; margin-bottom: 8px; }
-      header p{ font-size: 0.9rem; }
-      
-      header > div{
+    @media (max-width: 640px) {
+      .wrap {
+        padding-bottom: 26px;
+      }
+
+      header {
+        padding: 16px 12px;
+        margin: 12px 0;
+      }
+
+      header h1 {
+        font-size: 1.25rem;
+        margin-bottom: 8px;
+      }
+
+      header p {
+        font-size: 0.9rem;
+      }
+
+      header>div {
         flex-direction: column;
         gap: 12px;
       }
-      header img{
+
+      header img {
         width: 100% !important;
         height: auto !important;
         max-width: 150px;
       }
-      
-      table, thead, tbody, th, td, tr{
+
+      table,
+      thead,
+      tbody,
+      th,
+      td,
+      tr {
         display: block;
       }
-      thead{ display:none; }
-      table{
+
+      thead {
+        display: none;
+      }
+
+      table {
         border: none;
         border-radius: 0;
         overflow: visible;
       }
-      tr{
+
+      tr {
         background: var(--card);
         border: 1px solid var(--line);
         border-radius: 14px;
@@ -177,13 +233,15 @@
         padding: 10px 12px;
         margin-bottom: 12px;
       }
-      td{
+
+      td {
         border: none;
         padding: 8px 0;
       }
-      td[data-label]::before{
+
+      td[data-label]::before {
         content: attr(data-label);
-        display:block;
+        display: block;
         font-size: 0.85rem;
         color: var(--muted);
         margin-bottom: 2px;
@@ -191,15 +249,18 @@
       }
     }
 
-    @media (prefers-reduced-motion: reduce){
-      *{ scroll-behavior: auto !important; transition: none !important; }
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        scroll-behavior: auto !important;
+        transition: none !important;
+      }
     }
   </style>
-<link rel="icon" type="image/png" href="images/favicon-96x96.png" sizes="96x96"/>
-<link rel="icon" type="image/svg+xml" href="images/favicon.svg"/>
-<link rel="shortcut icon" href="images/favicon.ico"/>
-<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png"/>
-<link rel="manifest" href="images/site.webmanifest"/>
+  <link rel="icon" type="image/png" href="images/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+  <link rel="shortcut icon" href="images/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
+  <link rel="manifest" href="images/site.webmanifest" />
 </head>
 
 <body>
@@ -210,7 +271,8 @@
           <h1>Tierärztliche Praxis Dr. U. Wulf / C. Majora</h1>
           <p>Querallee 11 · 21698 Bargstedt · Tel. 04164 2777</p>
         </div>
-        <img src="images/logo.JPG" alt="Praxis Logo" style="width: auto; height: 120px; border-radius: 8px; flex-shrink: 0;">
+        <img src="images/logo.JPG" alt="Praxis Logo"
+          style="width: auto; height: 120px; border-radius: 8px; flex-shrink: 0;">
       </div>
     </header>
 
@@ -218,7 +280,9 @@
       <section class="card">
         <h2>Willkommen</h2>
         <p>
-          Herzlich willkommen in der Tierarztpraxis Bargstedt. Unser Team besteht aus den Tierärzten Dr. Uwe Wulf und Christoph Majora und der Tierärztin Ulrike Driessen. Unterstützt werden diese von Jana Wulf und unserer TFA Katrin Thomas.
+          Herzlich willkommen in der Tierarztpraxis Bargstedt. Unser Team besteht aus den Tierärzten Dr. Uwe Wulf und
+          Christoph Majora und der Tierärztin Ulrike Driessen. Unterstützt werden diese von Jana Wulf und unserer TFA
+          Katrin Thomas.
         </p>
       </section>
 
@@ -263,7 +327,8 @@
         </table>
 
         <div class="note">
-          <strong>Terminsprechstunde nach telefonischer Vereinbarung. In die offene Sprechstunde kommen Sie bitte ohne Anmeldung.</strong>
+          <strong>Terminsprechstunde nach telefonischer Vereinbarung. In die offene Sprechstunde kommen Sie bitte ohne
+            Anmeldung.</strong>
         </div>
       </section>
 
@@ -271,8 +336,10 @@
         <h2>Registrierung für Neukunden</h2>
         <p>Scannen oder klicken Sie den QR-Code für die Neukundenregistrierung:</p>
         <div style="text-align: center; margin: 16px 0;">
-          <a href="https://app.petsxl.com/#/signin/self-check-in-start/6d6bb8cd-afca-4d52-b471-80b0d2ed9f25" target="_blank" rel="noopener noreferrer">
-          <img src="images/qrcode.png" alt="QR-Code zur Registrierung" style="border-radius: 8px; padding: 8px; background: white; border: 1px solid var(--line); width: 200px; height: 200px;">
+          <a href="https://app.petsxl.com/#/signin/self-check-in-start/6d6bb8cd-afca-4d52-b471-80b0d2ed9f25"
+            target="_blank" rel="noopener noreferrer">
+            <img src="images/qrcode.png" alt="QR-Code zur Registrierung"
+              style="border-radius: 8px; padding: 8px; background: white; border: 1px solid var(--line); width: 200px; height: 200px;">
           </a>
         </div>
       </section>
