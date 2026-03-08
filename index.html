@@ -9,6 +9,10 @@
   <meta name="description"
     content="Tierarztpraxis Bargstedt – Dr. U. Wulf & C. Majora bieten Termin- und offene Sprechstunde. Jetzt online Neukundenregistrierung.">
 
+  <!-- preload fonts to reduce render-blocking and improve performance -->
+  <link rel="preload" href="fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Inter-Medium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Inter-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 
   <style>
     @font-face {
@@ -38,8 +42,9 @@
       --text: #1f2a37;
       --muted: #5b6776;
       --line: #e6ebf2;
-      --brand1: #2f80ed;
-      --brand2: #14b8a6;
+      /* darker brand colors for WCAG contrast with white text */
+      --brand1:#1e4ec8; /* originally #2f80ed */
+      --brand2:#086c63; /* originally #14b8a6 */
       --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
       --radius: 16px;
     }
@@ -52,8 +57,8 @@
       margin: 0;
       font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
       color: var(--text);
-      background: radial-gradient(1200px 600px at 20% 0%, rgba(47, 128, 237, .12), transparent 60%),
-        radial-gradient(1000px 600px at 90% 10%, rgba(20, 184, 166, .10), transparent 55%),
+      background: radial-gradient(1200px 600px at 20% 0%, rgba(30, 78, 200, .12), transparent 60%),
+        radial-gradient(1000px 600px at 90% 10%, rgba(8, 108, 99, .10), transparent 55%),
         var(--bg);
       line-height: 1.55;
     }
@@ -69,7 +74,7 @@
       padding: 22px 18px;
       border-radius: var(--radius);
       color: white;
-      background: #2f80ed;
+      background: var(--brand1);
       box-shadow: var(--shadow);
     }
 
