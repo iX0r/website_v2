@@ -9,9 +9,6 @@
   <meta name="description"
     content="Tierarztpraxis Bargstedt – Dr. U. Wulf & C. Majora bieten Termin- und offene Sprechstunde. Jetzt online Neukundenregistrierung.">
 
-  <!-- preconnect to root to shorten font request chain -->
-  <link rel="preconnect" href="https://tierarztpraxis-bargstedt.de" crossorigin>
-  <link rel="dns-prefetch" href="//tierarztpraxis-bargstedt.de">
   <!-- preload regular font to reduce render-blocking; semi-bold loads later when needed -->
   <link rel="preload" href="fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
 
@@ -39,7 +36,6 @@
       --line: #e6ebf2;
       /* darker brand colors for WCAG contrast with white text */
       --brand1:#1e4ec8; /* originally #2f80ed */
-      --brand2:#086c63; /* originally #14b8a6 */
       --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
       --radius: 16px;
     }
@@ -145,8 +141,14 @@
       color: var(--text);
     }
 
-    tr:last-child td {
+    tr:last-child td,
+    tr:last-child th {
       border-bottom: none;
+    }
+
+    tbody th {
+      background: none;
+      font-size: inherit;
     }
 
     .note {
@@ -173,6 +175,10 @@
 
     a:hover {
       text-decoration: underline;
+    }
+
+    header a {
+      color: white;
     }
 
     /* Responsive: turn opening-hours table into cards on small screens */
@@ -234,7 +240,8 @@
         margin-bottom: 12px;
       }
 
-      td {
+      td,
+      tbody th {
         border: none;
         padding: 8px 0;
       }
@@ -257,7 +264,6 @@
     }
   </style>
   <link rel="icon" type="image/png" href="images/favicon-96x96.png" sizes="96x96" />
-  <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
   <link rel="shortcut icon" href="images/favicon.ico" />
   <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
   <link rel="manifest" href="images/site.webmanifest" />
@@ -269,7 +275,7 @@
       <div style="display: flex; align-items: center; gap: 16px; justify-content: space-between;">
         <div>
           <h1>Tierärztliche Praxis Dr. U. Wulf / C. Majora</h1>
-          <p>Querallee 11 · 21698 Bargstedt · Tel. 04164 2777</p>
+          <p>Querallee 11 · 21698 Bargstedt · Tel. <a href="tel:+4941642777">04164 2777</a></p>
         </div>
         <picture>
           <source srcset="images/logo.avif" type="image/avif">
@@ -292,39 +298,39 @@
       </section>
 
       <section class="card">
-        <h2>Öffnungszeiten</h2>
+        <h2 id="oeffnungszeiten">Öffnungszeiten</h2>
 
-        <table aria-label="Öffnungszeiten">
+        <table aria-labelledby="oeffnungszeiten">
           <thead>
             <tr>
-              <th></th>
-              <th>Terminsprechstunde</th>
-              <th>Offene Sprechstunde</th>
+              <th scope="col">Tag</th>
+              <th scope="col">Terminsprechstunde</th>
+              <th scope="col">Offene Sprechstunde</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>Montag</td>
+              <th scope="row">Montag</th>
               <td data-label="Terminsprechstunde">9:00 – 12:00, 16:30 – 17:30</td>
               <td data-label="Offene Sprechstunde">17:30 – 19:00</td>
             </tr>
             <tr>
-              <td>Dienstag</td>
+              <th scope="row">Dienstag</th>
               <td data-label="Terminsprechstunde">9:00 – 12:00, 16:30 – 17:30</td>
               <td data-label="Offene Sprechstunde">17:30 – 19:00</td>
             </tr>
             <tr>
-              <td>Mittwoch</td>
+              <th scope="row">Mittwoch</th>
               <td data-label="Terminsprechstunde">9:00 – 12:00</td>
               <td data-label="Offene Sprechstunde">—</td>
             </tr>
             <tr>
-              <td>Donnerstag</td>
+              <th scope="row">Donnerstag</th>
               <td data-label="Terminsprechstunde">9:00 – 12:00, 16:30 – 17:30</td>
               <td data-label="Offene Sprechstunde">17:30 – 19:00</td>
             </tr>
             <tr>
-              <td>Freitag</td>
+              <th scope="row">Freitag</th>
               <td data-label="Terminsprechstunde">9:00 – 12:00, 16:30 – 17:30</td>
               <td data-label="Offene Sprechstunde">17:30 – 19:00</td>
             </tr>
@@ -343,7 +349,7 @@
         <div style="text-align: center; margin: 16px 0;">
           <a href="https://app.petsxl.com/#/signin/self-check-in-start/6d6bb8cd-afca-4d52-b471-80b0d2ed9f25"
             target="_blank" rel="noopener noreferrer">
-            <img src="images/qrcode.png" alt="QR-Code zur Registrierung"
+            <img src="images/qrcode.png" alt="QR-Code zur Registrierung" width="200" height="200"
               style="border-radius: 8px; padding: 8px; background: white; border: 1px solid var(--line); width: 200px; height: 200px;">
           </a>
         </div>
@@ -353,7 +359,10 @@
     </main>
 
     <footer>
-      Tierärztliche Praxis Dr. U.Wulf / C.Majora · Querallee 11 · 21698 Bargstedt · Tel. 04164 2777
-      <a href="impressum.html">Impressum &amp; Datenschutz</a>
+      Tierärztliche Praxis Dr. U. Wulf / C. Majora · Querallee 11 · 21698 Bargstedt · Tel. <a href="tel:+4941642777">04164 2777</a>
+      · <a href="impressum.html">Impressum &amp; Datenschutz</a>
     </footer>
-  </div
+  </div>
+</body>
+
+</html>

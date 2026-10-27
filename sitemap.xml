@@ -6,19 +6,12 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
   <loc>https://tierarztpraxis-bargstedt.de/</loc>
-  <lastmod>2026-01-29T19:57:41+00:00</lastmod>
+  <lastmod>2026-10-27T00:00:00+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://tierarztpraxis-bargstedt.de/impressum.html</loc>
-  <lastmod>2026-01-29T19:57:41+00:00</lastmod>
+  <lastmod>2026-10-27T00:00:00+00:00</lastmod>
   <priority>0.80</priority>
 </url>
-<url>
-  <loc>https://tierarztpraxis-bargstedt.de/index.html</loc>
-  <lastmod>2026-01-29T19:57:41+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-
-
 </urlset>
