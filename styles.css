@@ -1,0 +1,298 @@
+@font-face {
+  font-family: 'Inter';
+  src: url('fonts/Inter-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('fonts/Inter-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-display: swap;
+}
+
+:root {
+  --bg: #f3f6fb;
+  --card: #ffffff;
+  --text: #1f2a37;
+  --muted: #5b6776;
+  --line: #e6ebf2;
+  /* darker brand colour for WCAG contrast with white text (originally #2f80ed) */
+  --brand1: #1e4ec8;
+  --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+  --radius: 16px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--text);
+  background: radial-gradient(1200px 600px at 20% 0%, rgba(30, 78, 200, .12), transparent 60%),
+    radial-gradient(1000px 600px at 90% 10%, rgba(8, 108, 99, .10), transparent 55%),
+    var(--bg);
+  line-height: 1.55;
+  min-height: 100vh;
+}
+
+.wrap {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 20px 16px 40px;
+}
+
+/* Header */
+header {
+  margin: 18px 0;
+  padding: 22px 18px;
+  border-radius: var(--radius);
+  color: white;
+  background: var(--brand1);
+  box-shadow: var(--shadow);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.55rem;
+  letter-spacing: -0.02em;
+}
+
+header p {
+  margin: 6px 0 0;
+  color: white;
+  opacity: .95;
+  font-size: 0.98rem;
+}
+
+header a {
+  color: white;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  justify-content: space-between;
+}
+
+.logo {
+  width: auto;
+  height: 120px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+/* Content */
+.grid {
+  display: grid;
+  gap: 14px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 18px;
+}
+
+h2 {
+  margin: 0 0 10px;
+  font-size: 1.15rem;
+  letter-spacing: -0.01em;
+}
+
+* + h2 {
+  margin-top: 14px;
+}
+
+h3 {
+  margin: 14px 0 8px;
+  font-size: 1.02rem;
+}
+
+p {
+  margin: 0 0 10px;
+  color: var(--muted);
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+a {
+  color: var(--brand1);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a[href^="tel:"] {
+  white-space: nowrap;
+}
+
+.back {
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+.note {
+  margin: 12px 0 14px;
+  padding: 12px;
+  border-radius: 12px;
+  background: #f7fbff;
+  border: 1px solid #dbeafe;
+  color: var(--muted);
+}
+
+.note:last-child {
+  margin-bottom: 0;
+}
+
+.qr {
+  text-align: center;
+  margin: 16px 0;
+}
+
+.qr img {
+  width: 200px;
+  height: 200px;
+  padding: 8px;
+  border-radius: 8px;
+  background: white;
+  border: 1px solid var(--line);
+}
+
+/* Opening-hours table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+
+th {
+  background: #f7f9fc;
+  color: var(--text);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+tbody th {
+  background: none;
+  font-size: inherit;
+}
+
+td {
+  color: var(--text);
+}
+
+tr:last-child td,
+tr:last-child th {
+  border-bottom: none;
+}
+
+footer {
+  margin-top: 16px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* Responsive: turn opening-hours table into cards on small screens */
+@media (max-width: 640px) {
+  .wrap {
+    padding-bottom: 26px;
+  }
+
+  header {
+    padding: 16px 12px;
+    margin: 12px 0;
+  }
+
+  header h1 {
+    font-size: 1.25rem;
+  }
+
+  header p {
+    margin-top: 8px;
+    font-size: 0.9rem;
+  }
+
+  .header-inner {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .logo {
+    width: 100%;
+    height: auto;
+    max-width: 150px;
+  }
+
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  thead {
+    display: none;
+  }
+
+  table {
+    border: none;
+    border-radius: 0;
+    overflow: visible;
+  }
+
+  tr {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    box-shadow: var(--shadow);
+    padding: 10px 12px;
+    margin-bottom: 12px;
+  }
+
+  td,
+  tbody th {
+    border: none;
+    padding: 8px 0;
+  }
+
+  td[data-label]::before {
+    content: attr(data-label);
+    display: block;
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin-bottom: 2px;
+    font-weight: 600;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto !important;
+    transition: none !important;
+  }
+}
